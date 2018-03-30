@@ -1,0 +1,47 @@
+/* Dylan Grandjean, April 27th 2017 */
+
+/*Change body's background*/
+form {
+	background-color: rgb(255, 252, 254);
+}
+/*Change fieldset settings*/
+fieldset {
+	padding: 2em;
+	font: 80%/1 sans-serif;
+	background-color: rgb(255, 252, 244);
+}
+/*Change label alignment in customer and card info*/
+#customerInfo label, #creditCardInfo label {
+	float: left;
+	width: 15%;
+	margin-right: 0.5em;
+	padding-top: 0.2em;
+	text-align: right;
+}
+/*Change legend look*/
+legend {
+	font-weight: bold;
+}
+/*Manage validation visual*/
+input, select, textarea {background-color: rgb(255, 252, 244);}
+input:focus, select:focus, textarea:focus {background-color: rgb(255, 240, 181);}
+input:focus:valid {
+	background: rgb(220, 255, 220) url(go.png) bottom right no-repeat;
+	-o-background-size: contain;
+	-moz-background-size: contain;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+input:focus:invalid {
+	background: rgb(255, 232, 233) url(stop.png) bottom right no-repeat;
+	-o-background-size: contain;
+	-moz-background-size: contain;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+/*Submit button look*/
+#submitButton {
+	font-size: 15px;
+	font-weight: bold;
+	padding: 20px;
+}

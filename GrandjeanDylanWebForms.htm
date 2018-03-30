@@ -1,0 +1,238 @@
+<!-- Dylan Grandjean, April 27th 2017 -->
+<!doctype html>
+<html>
+<head>
+	<!-- Page title-->
+    	<title>Web From (Part1)</title>
+    	<link rel="stylesheet" href="GrandjeanDylanWebForms.css">
+</head>
+<body>
+	<form>
+		<!-- Customer Info-->
+		<fieldset id="customerInfo">
+			<legend>Customer Info</legend>
+			<!--First and last name fields and labels-->
+			<label for="fName">First Name*:</label>
+			<input type="text" name="fName" id="fName" placeholder="First name" minlength="2" required>
+			<br>
+			<label for="lName">Last Name*:</label>
+			<input type="text" name="lName" id="lName" placeholder="Last name" minlength="2" required>
+			<br><br>
+		
+			<!--Address Line 1-->
+			
+			<label for="streetAdd1">Address Line 1*:</label>
+			<input type="text" name="streetAdd1" id="streetAdd1" placeholder="Adress Line 1" required>
+			<br>
+			<!--Address Line 2-->
+			<label for="streetAdd2">Address Line 2:</label>
+			<input type="text" name="streetAdd2" id="streetAdd2" placeholder="Adress Line 2">
+			<br>
+			<!--Floor/Apt#-->
+			<label for="floorAdd">Floor/Apt#:</label>
+			<input type="text" name="floorAdd" id="floorAdd" placeholder="Floor/Apt#">
+			<br>
+			<!--City-->
+			<label for="cityAdd">City*:</label>
+			<input type="text" name="cityAdd" id="cityAdd" placeholder="City" required>
+			<br>
+			<!--State/Province/Region-->
+			<label>State*:</label>
+			<select required>
+				<option value="" disabled selected hidden>State</option>
+				<option value="al">AL</option>
+				<option value="ak">AK</option>
+				<option value="az">AZ</option>
+				<option value="ar">AR</option>
+				<option value="ca">CA</option>
+				<option value="co">CO</option>
+				<option value="ct">CT</option>
+				<option value="de">DE</option>
+				<option value="fl">FL</option>
+				<option value="ga">GA</option>
+				<option value="hi">HI</option>
+				<option value="ia">IA</option>
+				<option value="id">ID</option>
+				<option value="il">IL</option>
+				<option value="in">IN</option>
+				<option value="ks">KS</option>
+				<option value="ky">KY</option>
+				<option value="la">LA</option>
+				<option value="ma">MA</option>
+				<option value="md">MD</option>
+				<option value="me">ME</option>
+				<option value="mi">MI</option>
+				<option value="mn">MN</option>
+				<option value="mo">MO</option>
+				<option value="ms">MS</option>
+				<option value="mt">MT</option>
+				<option value="nc">NC</option>
+				<option value="nd">ND</option>
+				<option value="ne">NE</option>
+				<option value="nh">NH</option>
+				<option value="nj">NJ</option>
+				<option value="nm">NM</option>
+				<option value="nv">NV</option>
+				<option value="ny">NY</option>
+				<option value="oh">OH</option>
+				<option value="ok">OK</option>
+				<option value="or">OR</option>
+				<option value="pa">PA</option>
+				<option value="ri">RI</option>
+				<option value="sc">SC</option>
+				<option value="sd">SD</option>
+				<option value="tn">TN</option>
+				<option value="tx">TX</option>
+				<option value="ut">UT</option>
+				<option value="va">VA</option>
+				<option value="vt">VT</option>
+				<option value="wa">WA</option>
+				<option value="wi">WI</option>
+				<option value="wv">WV</option>
+				<option value="wy">WY</option>
+			</select>
+			<br>
+			<!--Zip Code-->
+			<label for="zipAdd">ZIP/Postal Code*:</label>
+			<input type="text" 
+			name="zipAdd" 
+			id="zipAdd" 
+			placeholder="ZIP / Postal Code" 
+			pattern="[0-9]{5}"
+			minlength="5"
+			maxlength="5"
+			required>
+			<br><br>
+		
+			<!--Phone Number-->
+			<label for="phone#">Phone:</label>
+			<input type="tel" 
+			name="phone#" 
+			id="phone#" 
+			placeholder="555-555-5555" 
+			pattern="\d{3}[\-]\d{3}[\-]\d{4}" 
+			title="Phone Number: format(555-555-5555)">
+			<select>
+				<option value="phoneH">Home</option>
+				<option value="phoneM">Mobile</option>
+				<option value="phoneW">Work</option>
+				<option value="phoneO">Other</option>
+			</select>
+			<br>
+			
+			<!--Email-->
+			<label for="emailAdd">Email*:</label>
+			<input type="email" 
+			name="emailAdd" 
+			id="emailAdd" 
+			placeholder="username@domain.com" 
+			required>
+			<select>
+				<option value="emailH">Home</option>
+				<option value="emailM">Mobile</option>
+				<option value="emailW">Work</option>
+				<option value="emailO">Other</option>
+			</select>
+			<br>
+		</fieldset>
+			
+		<!--Credit card info-->
+		<fieldset id="creditCardInfo">
+			<legend>Credit Card Info</legend>
+			<label for="cardType">Card Type*:</label>
+			<select id="cardType" required>
+				<option value="" disabled selected hidden>Type</option>
+				<option value="visaType">Visa</option>
+				<option value="masterType">MasterCard</option>
+				<option value="axpressType">American Express</option>
+				<option value="discoverType">Discover</option>
+			</select>
+			<br>
+			<label for="cardNumber">Card Number*:</label>
+			<input type="text" name="cardNumber" id="cardNumber" placeholder="Card number" minlength="16" maxlength="16" required>
+			<br>
+			<label for="cvv">CSC/CVV*:</label>
+			<input type="text" name="cvv#" id="cvv" placeholder="CSC/CVV" minlength="3" maxlength="3" required>
+			<br>
+			<label>Expiration*:</label>
+			<select required>
+				<option value="" disabled selected hidden>Exp. Month</option>
+				<option value="exp1">01</option>
+				<option value="exp2">02</option>
+				<option value="exp3">03</option>
+				<option value="exp4">04</option>
+				<option value="exp5">05</option>
+				<option value="exp6">06</option>
+				<option value="exp7">07</option>
+				<option value="exp8">08</option>
+				<option value="exp9">09</option>
+				<option value="exp10">10</option>
+				<option value="exp11">11</option>
+				<option value="exp12">12</option>
+			</select>
+			/
+			<select required>
+				<option value="" disabled selected hidden>Exp. Year</option>
+				<option value="exp17">17</option>
+				<option value="exp18">18</option>
+				<option value="exp19">19</option>
+				<option value="exp20">20</option>
+				<option value="exp21">21</option>
+				<option value="exp22">22</option>
+				<option value="exp23">23</option>
+				<option value="exp24">24</option>
+				<option value="exp25">25</option>
+				<option value="exp26">26</option>
+				<option value="exp27">27</option>
+				<option value="exp28">28</option>
+				<option value="exp29">29</option>
+				<option value="exp30">30</option>
+				<option value="exp31">31</option>
+				<option value="exp32">32</option>
+				<option value="exp33">33</option>
+				<option value="exp34">34</option>
+				<option value="exp35">35</option>
+				<option value="exp36">36</option>
+				<option value="exp37">37</option>
+			</select>
+		</fieldset>
+		
+		<!--Purchase Summary-->
+		<fieldset id="purchaseOption">
+			<legend>Purchase Options</legend>
+			<!--Item selection-->
+			<label>Items:</label><br>
+			<select multiple size="8">
+				<optgroup label="Clothes">
+					<option value="item01">Shirt</option>
+					<option value="item02">Skirt</option>
+					<option value="item03">Dress</option>
+				</optgroup>
+				<optgroup label="Food">
+					<option value="item04">Milk</option>
+					<option value="item05">Eggs</option>
+					<option value="item06">Bread</option>
+				</optgroup>
+			</select>
+			<br><br>
+			<!--Quantity-->
+			<label for="orderquantity">Order Quantity:</label>
+			<input type="number" name="orderQty" id="orderquantity">
+			<br><br>
+			<!--Priority shipping-->
+			<input type="checkbox" name="shipping" id="shippingOpt" value="shippingPrior"/>
+			<label for="shippingOpt">Priority Shipping</label>
+			<br><br>
+			<!--Mailing list subscription-->
+			<input type="radio" name="emailSub" id="emailSubY" value="subYes" checked="checked"/>
+			<label for="emailSubY">Yes, I would like to receive promotional emails regarding products sold by this company and affiliated businesses.</label>
+			<br>
+			<input type="radio" name="emailSub" id="emailSubN" value="subNo"/>
+			<label for="emailSubN">No, I do not wish to receive any email.</label>
+		</fieldset>
+		
+		<!--Submit Button-->
+		<input type="submit" id="submitButton" value="Submit">
+	</form>
+</body>
+</html>
